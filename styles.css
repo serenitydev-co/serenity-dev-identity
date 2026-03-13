@@ -479,7 +479,16 @@ h2 {
   }
 
   .logo-lockup {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .logo-lockup img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logo-lockup .brandmark {
+    font-size: clamp(1.5rem, 7vw, 2rem);
   }
 }
