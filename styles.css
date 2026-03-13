@@ -369,6 +369,11 @@ h2 {
   gap: 18px;
 }
 
+.exports-grid--large {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+}
+
 .export-card {
   display: grid;
   grid-template-rows: 240px auto;
@@ -414,6 +419,14 @@ h2 {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.export-card--large {
+  grid-template-rows: 420px auto;
+}
+
+.export-card--large img {
+  max-height: 380px;
 }
 
 .type-block__sample {
