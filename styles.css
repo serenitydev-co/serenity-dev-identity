@@ -131,6 +131,63 @@ h1 {
   line-height: 0.95;
 }
 
+.brandmark--animated {
+  display: block;
+  width: min(100%, 520px);
+  height: 78px;
+}
+
+.brandmark--animated svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.brandmark--animated text {
+  fill: rgba(243, 241, 238, 0);
+  stroke: rgba(243, 241, 238, 1);
+  stroke-width: 1.6;
+  stroke-dasharray: 0 50%;
+  stroke-dashoffset: 25%;
+  paint-order: stroke fill;
+  font-family: "Russo One", "Arial Black", sans-serif;
+  font-size: 84px;
+  letter-spacing: 0.01em;
+  animation: brandmark-stroke 8s ease-in-out infinite alternate;
+}
+
+@keyframes brandmark-stroke {
+  0% {
+    fill: rgba(243, 241, 238, 0);
+    stroke: rgba(243, 241, 238, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 1.8;
+  }
+
+  45% {
+    fill: rgba(243, 241, 238, 0);
+    stroke: rgba(243, 241, 238, 1);
+  }
+
+  60% {
+    fill: rgba(243, 241, 238, 1);
+    stroke: rgba(243, 241, 238, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+
+  100% {
+    fill: rgba(243, 241, 238, 1);
+    stroke: rgba(243, 241, 238, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
